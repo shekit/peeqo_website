@@ -16,6 +16,8 @@
 	<h1>Admin</h1>
 	{{#if currentUser}}
 		<h1>Hello Admin</h1>
+
+		<a href="#" class="logout">Logout</a>
 	{{else}}
 		{{>login}}
 	{{/if}}

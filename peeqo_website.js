@@ -21,6 +21,13 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.admin.events({
+    'click .logout': function(event){
+      event.preventDefault();
+      Meteor.logout();
+    }
+  })
+
   Template.login.events({
     'submit form': function(event){
       event.preventDefault();
