@@ -1,0 +1,19 @@
+<head>
+  <title>peeqo_website</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+
+  <ul>
+  {{#each emails}}
+  	<li>{{this.email}}</li>
+  {{/each}}
+  </ul>
+</template>
