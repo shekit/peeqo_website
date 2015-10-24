@@ -3,19 +3,21 @@ Emails = new Mongo.Collection("emails");
 // sendgrid api = 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
 
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
 
-  Template.home.helpers({
+  Meteor.subscribe('emails');
+
+  Template.admin.helpers({
     "emails": function(){
       return Emails.find({}); 
     }
   })
 
   Template.home.events({
-    'click button': function () {
+    'submit form': function (event) {
       // increment the counter when button is clicked
-      Meteor.call("saveEmail", "abhishek", function(err, result){
+      event.preventDefault();
+      var email = event.target.email.value;
+      Meteor.call("saveEmail", email, function(err, result){
         console.log(result) 
       });
     }
@@ -55,9 +57,16 @@ if (Meteor.isServer) {
         email: 'a@2.com',
         password: '123456'
       })
+
+      console.log('creating admin');
+      
     } else {
       console.log("admin already assigned")
     }
+  })
+
+  Meteor.publish('emails', function(){
+    return Emails.find();
   })
 
   Meteor.methods({

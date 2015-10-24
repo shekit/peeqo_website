@@ -3,13 +3,10 @@
 </template>
 	
 <template name="home">
-  <button>Click Me</button>
-
-  <ul>
-  {{#each emails}}
-  	<li>{{this.email}}</li>
-  {{/each}}
-  </ul>
+	<form>
+		<input type="email" name="email" placeholder="email" required='required'>
+		<input type="submit" value="Add">
+	</form>
 </template>
 
 <template name="admin">
@@ -18,6 +15,12 @@
 		<h1>Hello Admin</h1>
 
 		<a href="#" class="logout">Logout</a>
+
+		<ul>
+		{{#each emails}}
+	  		<li>{{this.email}}</li>
+	  	{{/each}}
+	  	</ul>
 	{{else}}
 		{{>login}}
 	{{/if}}
