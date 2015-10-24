@@ -14,11 +14,19 @@
 
 <template name="admin">
 	<h1>Admin</h1>
-	{{> loginButtons}}
+	{{#if currentUser}}
+		<h1>Hello Admin</h1>
+	{{else}}
+		{{>login}}
+	{{/if}}
 </template>
 
 <template name="login">
 	<h1>Login</h1>
 
-		{{> loginButtons}}
+	<form>
+		<input type="email" name="adminEmail" placeholder="Email" required='required'>
+		<input type="password" name="adminPassword" placeholder="Password" required='required'>
+		<input type="submit" value="Login">
+	</form>
 </template>

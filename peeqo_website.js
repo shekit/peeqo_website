@@ -20,6 +20,22 @@ if (Meteor.isClient) {
       });
     }
   });
+
+  Template.login.events({
+    'submit form': function(event){
+      event.preventDefault();
+      var email = event.target.adminEmail.value;
+      var pass = event.target.adminPassword.value;
+
+      Meteor.loginWithPassword(email, pass, function(err){
+        if(err){
+          console.log("Access denied");
+        } else {
+          Router.go('admin')
+        }
+      });
+    }
+  })
 }
 
 if (Meteor.isServer) {
@@ -67,43 +83,26 @@ Router.configure({
   'layoutTemplate': 'main'
 })
 
-Router.onBeforeAction(function(){
-  var user = Meteor.user();
-
-  if(Meteor.user()){
-    if(user['emails'][0]['address'] != 'a@2.com'){
-      this.render('home');
-    } else {
-      this.next();
-    }
-  } else {
-    this.next();
-  }
-
-}, {
-  only: ['admin']
-});
-
 Router.route('/',{
   name: "home",
   template: "home"
 })
 
-Router.route('/login',{
-  name: "login",
-  template: "login"
-})
 
 Router.route('/nimda', {
   name:'admin',
   template: 'admin',
-  // onBeforeAction: function(){
-  //   var user = Meteor.user();
+  onBeforeAction: function(){
+    var user = Meteor.user();
 
-  //   if(user['emails'][0]['address'] != 'a@2.com'){
-  //     this.render('home')
-  //   } else {
-  //     this.next();
-  //   }
-  // }
+    if(Meteor.user()){
+      if(user['emails'][0]['address'] != 'a@2.com'){
+        this.render('home');
+      } else {
+        this.next();
+      }
+    } else {
+      this.next();
+    }
+  }
 })
