@@ -23,7 +23,7 @@ if (Meteor.isClient) {
 
   Template.subscriberList.helpers({
     "emails": function(){
-      return Emails.find({}); 
+      return Emails.find({}, {sort:{createdAt:-1}}); 
     },
 
     "count": function(){
@@ -113,7 +113,7 @@ if (Meteor.isServer) {
       text: ''
     });
   }, {
-    minute: 10,
+    minute: 11,
     hour: 00
   })
 
