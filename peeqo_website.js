@@ -1,5 +1,16 @@
 Emails = new Mongo.Collection("emails");
 
+// this.Pages = new Meteor.Pagination(Emails, {
+  
+//   //itemTemplate: 'subscriberList',
+//   router: "iron-router",
+//   homeRoute: "/nimda/",
+//   route:'/nimda/',
+//   routerTemplate: 'emails',
+//   // routerLayout: 'main',
+//   perPage: 1
+// })
+
 // sendgrid api = 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
 
 if (Meteor.isClient) {
@@ -96,7 +107,7 @@ if (Meteor.isServer) {
         } else {
           Emails.insert({
             "email": email,
-            "createdAt": new Date()
+            "createdAt": new Date(),
           })
 
           Email.send({
