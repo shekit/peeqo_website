@@ -6,9 +6,17 @@ if (Meteor.isClient) {
 
   Meteor.subscribe('emails');
 
+  Template.registerHelper('formatDate', function(date){
+    return moment(date).format('DD-MM-YYYY')
+  })
+
   Template.subscriberList.helpers({
     "emails": function(){
       return Emails.find({}); 
+    },
+
+    "count": function(){
+      return Emails.find({}).count();
     }
   })
 

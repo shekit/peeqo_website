@@ -24,20 +24,43 @@
 </template>
 
 <template name="subscriberList">
+
 	<div class="row">
-		<div class="col-sm-12">
-			<a href="#" class="download-list">Download</a>
-			<a href="#" class="pull-right logout">Logout</a>
+		<div class="col-sm-12 text-right">
+			<a href="#" class="download-list btn btn-success btn-small">Download</a>
+			<a href="#" class="logout btn btn-danger btn-small">Logout</a>
 		</div>
 	</div>
 
 	<div class="row">
+		<div class="col-sm-12 text-center">
+			<h1>{{count}}</h1>
+			<p>subscribers</p>
+		</div>
+	</div>	
+
+	<div class="row">
 		<div class="col-sm-12">
-			<ul>
-			{{#each emails}}
-		  		<li>{{this.email}}</li>
-		  	{{/each}}
-		  	</ul>
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>S.No</th>
+							<th>Email</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each emails}}
+							<tr>
+								<td>Num</td>
+								<td>{{this.email}}</td>
+								<td>{{formatDate this.createdAt}}</td>
+							</tr>
+		  				{{/each}}
+					</tbody>
+				</table>
+			</div>
 	  	</div>
 	</div>	
 </template>
