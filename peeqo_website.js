@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 
   Meteor.subscribe('emails');
 
-  Template.admin.helpers({
+  Template.subscriberList.helpers({
     "emails": function(){
       return Emails.find({}); 
     }
@@ -23,7 +23,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.admin.events({
+  Template.subscriberList.events({
     'click .logout': function(event){
       event.preventDefault();
       Meteor.logout();

@@ -1,1 +1,17 @@
 /* CSS declarations go here */
+
+/*BOOTSTRAP OVERRIDES*/
+.btn, .btn-lg, .input-lg, .form-control  {
+	border-radius: 0;
+}
+
+.form-control {
+	box-shadow: none;
+}
+
+.admin-login-wrapper {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #e5e5e5;
+	box-shadow: 0 0 5px 2px #ccc;
+}
