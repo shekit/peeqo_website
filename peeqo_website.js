@@ -27,6 +27,17 @@ if (Meteor.isClient) {
     'click .logout': function(event){
       event.preventDefault();
       Meteor.logout();
+    },
+
+    'click .download-list': function(event){
+      event.preventDefault();
+      var fileName = 'list.csv';
+      Meteor.call('downloadList', function(err, fileContent){
+        if(fileContent){
+          var blob = new Blob([fileContent], {type: "text/plain;charset=utf-8"});
+          saveAs(blob, fileName);
+        }
+      })
     }
   })
 
@@ -90,6 +101,13 @@ if (Meteor.isServer) {
           return "success"
         }
         
+      },
+
+      "downloadList": function(){
+        var collection = Emails.find().fetch();
+        var heading = true;
+        var delimiter = ',';
+        return exportcsv.exportToCSV(collection, heading, delimiter)
       }
 
   })
