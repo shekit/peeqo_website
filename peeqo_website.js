@@ -99,6 +99,24 @@ if (Meteor.isServer) {
     return Emails.find();
   })
 
+  var subscriberCountEmail = new Cron(function(){
+    console.log("sending email subscriber count")
+    var date = new Date();
+    date.setHours(0,0,0,0); //set date to start of the day
+    var todaysSubscribers = Emails.find({createdAt:{$gte:date}}).count();
+
+    var subject = "Todays Signup count: " + todaysSubscribers;
+    Email.send({
+      to: 'abhishek3188@gmail.com',
+      from: 'subscribercount@peeqo.com',
+      subject: subject,
+      text: ''
+    });
+  }, {
+    minute: 10,
+    hour: 00
+  })
+
   Meteor.methods({
       "saveEmail": function(email){
 
