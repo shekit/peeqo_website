@@ -12,7 +12,7 @@ if (Meteor.isClient) {
     }
   })
 
-  Template.home.events({
+  Template.signup.events({
     'submit form': function (event) {
       // increment the counter when button is clicked
       event.preventDefault();
@@ -59,7 +59,7 @@ if (Meteor.isServer) {
       })
 
       console.log('creating admin');
-      
+
     } else {
       console.log("admin already assigned")
     }
@@ -82,7 +82,7 @@ if (Meteor.isServer) {
 
           Email.send({
             from: "peeqo@peeqo.com",
-            to: "abhishek3188@gmail.com",
+            to: "abhishek3188@gmail.com", //replace this with the email var
             subject: "Hello from sendgrid",
             text: "This is working"
           });
