@@ -1,5 +1,5 @@
 Emails = new Mongo.Collection("emails");
-
+key = Meteor.settings;
 // this.Pages = new Meteor.Pagination(Emails, {
   
 //   //itemTemplate: 'subscriberList',
@@ -79,13 +79,15 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
 
+  
+
   Meteor.startup(function(){
     process.env.MAIL_URL = 'smtp://postmaster@sandboxb179e336a1664590b1279d4409dbb3e5.mailgun.org:1ac9fd9f708c626dd29bf27bcfe42932@smtp.mailgun.org:587'
   
     if(Meteor.users.find().count() == 0){
       Accounts.createUser({
-        email: 'a@2.com',
-        password: '123456'
+        email: key.adminEmail,
+        password: key.adminPassword
       })
 
       console.log('creating admin');
@@ -113,7 +115,7 @@ if (Meteor.isServer) {
       text: ''
     });
   }, {
-    minute: 11,
+    minute: 23,
     hour: 00
   })
 
@@ -129,7 +131,7 @@ if (Meteor.isServer) {
           })
 
           Email.send({
-            from: "peeqo@peeqo.com",
+            from: "hi@peeqo.com",
             to: "abhishek3188@gmail.com", //replace this with the email var
             subject: "Hello from sendgrid",
             text: "This is working"
@@ -165,15 +167,15 @@ Router.route('/nimda', {
   template: 'admin',
   onBeforeAction: function(){
     var user = Meteor.user();
-
-    if(Meteor.user()){
-      if(user['emails'][0]['address'] != 'a@2.com'){
-        this.render('home');
-      } else {
-        this.next();
-      }
-    } else {
-      this.next();
-    }
+    this.next()
+    // if(Meteor.user()){
+    //   if(user['emails'][0]['address'] != key.adminEmail){
+    //     this.render('home');
+    //   } else {
+    //     this.next();
+    //   }
+    // } else {
+    //   this.next();
+    // }
   }
 })

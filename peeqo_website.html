@@ -5,7 +5,53 @@
 </template>
 	
 <template name="home">
-	{{>signup}}
+	{{>panel1}}
+	{{>panel2}}
+</template>
+
+<template name="panel1">
+<div class="row">
+	<div class="col-sm-6">
+		<img src="/images/peeqo.png" alt="peeqo" width="500">
+	</div>
+	<div class="col-sm-6">
+		<h1>Your Desktop Robot that interacts through GIFs</h1>
+		{{>signup}}
+
+		<br><br>
+		<p>Actually there's more</p>
+	</div>
+</div>
+</template>
+
+<template name="panel2">
+	<div class="row">
+		<h2 class="text-center">The perfect workplace companion</h2>
+		<div class="col-sm-4">
+			<h4>Reminders</h4>
+			<p></p>
+		</div>
+		<div class="col-sm-4">
+			<h4>Notifications</h4>
+			<p></p>
+		</div>
+		<div class="col-sm-4">
+			<h4>Tracking</h4>
+			<p></p>
+		</div>
+		<div class="col-sm-4">
+			<h4>Sharing</h4>
+			<p></p>
+		</div>
+		<div class="col-sm-4">
+			<h4>and More</h4>
+			<p></p>
+		</div>
+	</div>
+</template>
+
+<template name="panel3">
+
 </template>
 
 <template name="signup">
