@@ -7,6 +7,9 @@
 <template name="home">
 	{{>panel1}}
 	{{>panel2}}
+	{{>panel3}}
+	{{>panel4}}
+	{{>panel5}}
 </template>
 
 <template name="panel1">
@@ -15,7 +18,7 @@
 		<img src="/images/peeqo.png" alt="peeqo" width="500">
 	</div>
 	<div class="col-sm-6">
-		<h1>Your Desktop Robot that interacts through GIFs</h1>
+		<h1>Hi, I'm Peeqo<br>The first robot to interact through GIFs, 'nuf said</h1>
 		{{>signup}}
 
 		<br><br>
@@ -26,32 +29,59 @@
 
 <template name="panel2">
 	<div class="row">
-		<h2 class="text-center">The perfect workplace companion</h2>
+		<h2 class="text-center">I'm your perfect workplace companion</h2>
 		<div class="col-sm-4">
 			<h4>Reminders</h4>
 			<p></p>
 		</div>
 		<div class="col-sm-4">
 			<h4>Notifications</h4>
-			<p></p>
+			<p>Switch off those annoying notifications. Let me who can bother you and when and I'll deal with it. </p>
 		</div>
 		<div class="col-sm-4">
 			<h4>Tracking</h4>
-			<p></p>
+			<p>When you're slacking at work and need a boost I'll be there. If you burning the midnight oil and need a break I'll let you know. Let's work smarter together.</p>
 		</div>
 		<div class="col-sm-4">
 			<h4>Sharing</h4>
-			<p></p>
+			<p>I connect to other Peeqo's. So let me know what you want to send and to whom and their Peeqo will notify them when he receives your message.</p>
 		</div>
 		<div class="col-sm-4">
 			<h4>and More</h4>
-			<p></p>
+			<p>I learn as I grow and get new skills pushed to me often. If there's something that missing, you can add it in yourself. It's as simple as drag and drop.</p>
 		</div>
 	</div>
 </template>
 
 <template name="panel3">
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>A personality that grows with you</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<p>examples of expressions</p>
+		</div>
+	</div>
+</template>
 
+<template name="panel4">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>A long time ago</h1>
+			<p>Early prototype</p>
+		</div>
+	</div>
+</template>
+
+<template name="panel5">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>I want one</h1>
+			<p>contact hi@peeqo.com</p>
+		</div>
+	</div>
 </template>
 
 <template name="signup">
@@ -114,8 +144,8 @@
 </template>
 
 <template name="emails">
-{{>pages}}
-{{>pagesNav}}
+	{{>pages}}
+	{{>pagesNav}}
 </template>
 
 <template name="login">
