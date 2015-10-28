@@ -1,5 +1,3 @@
-TOP:
-
 Hey I'm Peeqo,
 The first robot to interact through GIFs, 'nuf said!
 
@@ -8,6 +6,8 @@ Actually I'm so much more
 
 I'm <i>your</i> perfect/rad/crazy/delightful/one-of-a-kind/tiny/sassy/sexy/entertaining/funny workplace assistant
 Put me on your desk
+
+Everything a personal assistant does minus the sick leaves, expenses and awkward chemistry
 
 - Selfie Taker
 Say the words and I'll snap you and send it to whoever you want. No more weird stretched out arms.
@@ -30,13 +30,16 @@ My skills are constantly being updated by the robot overlords. If somethings mis
 - Friend
 Work gets hard. Work gets boring. I'll help you get through the day and have some fun while you're at it.
 
-- Connected
-Stop tapping around. Connect through me to your favourite apps using just your voice. 
+Beyond the tiny body
 
+- Connected
+Stop tapping around. Connect through me to your favourite apps using just your voice. Connected to your devices whether in office or on the move
 
 -Interconnected
 To other Peeqos everywhere. Remotely control someone else's Peeqo or send messages to them.
 
+
+Personal Assistant. Friend. 
 
 Not your average bot!
 
