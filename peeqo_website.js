@@ -36,9 +36,12 @@ if (Meteor.isClient) {
       // increment the counter when button is clicked
       event.preventDefault();
       var email = event.target.email.value;
-      Meteor.call("saveEmail", email, function(err, result){
-        console.log(result) 
-      });
+
+      if(email){
+        Meteor.call("saveEmail", email, function(err, result){
+          console.log(result) 
+        });
+      }
     }
   });
 
