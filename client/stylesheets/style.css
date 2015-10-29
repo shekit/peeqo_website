@@ -26,6 +26,15 @@ h1,h2 {
 	box-shadow: 0 0 5px 2px #ccc;
 }
 
+/***** GENERAL ******/
+
+.subtext {
+	font-style: italic;
+	font-size: 12px;
+	color: #aaa;
+}
+
+
 /*#F64638*/
 
 /******** TOPBAR **********/

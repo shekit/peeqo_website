@@ -8,7 +8,7 @@
 <template name="home">
 	{{>panelOne}}
 	{{>dividerOne}}
-	{{>panel2}}
+	{{>panelTwo}}
 	{{>panel3}}
 	{{>panel4}}
 	{{>panel5}}
@@ -55,10 +55,14 @@
 	</div>
 </template>
 
-<template name="panel2">
+<template name="wordCycle">
+	<h3 class="text-center">I'm <em>your</em> <span class="word">perfect</span> personal assistant</h3>
+</template>
+
+<template name="panelTwo">
 	<div class="row">
-		<h3 class="text-center">I'm <i>your</i> perfect/rad/crazy/delightful/one-of-a-kind/tiny/sassy/groovy/entertaining/funny/cheerful/ personal assistant</h3>
-		<p class="text-center">(minus the sick leaves, expenses or awkward chemistry)</p>
+		{{>wordCycle}}
+		<p class="text-center subtext">*minus the sick leaves, expenses or awkward chemistry</p>
 		<div class="col-sm-4 text-center">
 			<h4>Reminders</h4>
 			<img class="featureset-img" src="/images/placeholder_wide.png">

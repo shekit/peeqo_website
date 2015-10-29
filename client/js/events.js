@@ -45,3 +45,15 @@ Template.login.events({
     });
   }
 })
+
+Template.wordCycle.onRendered(function(){
+  var words = ['delightful','rad','crazy','one-of-a-kind','tiny','charming','groovy','entertaining','funny','cheerful','perfect'];
+  var count = 0;
+  setInterval(function(){
+    $(".word").html(words[count]);
+    count++;
+    if(count == words.length){
+      count = 0
+    }
+  },700)
+});
