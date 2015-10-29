@@ -17,3 +17,30 @@
 }
 
 /*#F64638*/
+
+/******** TOPBAR **********/
+.topbar-row {
+	border-bottom: 2px solid #eee;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+
+.topbar-logo {
+	padding: 0;
+	margin:0;
+}
+
+.topbar-list {
+	margin-bottom: 0;
+}
+
+.topbar-link {
+	font-size: 18px;
+	font-weight: 300;
+	color: #ccc;
+}
+
+.topbar-link:hover {
+	color: #F64638;
+	text-decoration: none;
+}

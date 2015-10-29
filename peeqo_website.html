@@ -1,4 +1,5 @@
 <template name="main">
+	{{>topbar}}
 	<div class="container-fluid">
 		{{>yield}}
 	</div>
@@ -29,8 +30,20 @@
 </div>
 </template>
 
-<template name="navbar">
-	<div class="container">
+<template name="topbar">
+	<div class="container-fluid">
+		<div class="row topbar-row">
+			<div class="col-xs-4">
+				<h1 class="topbar-logo"><a href="{{pathFor 'home'}}"><img src="/images/logo.png" width="150"></a></h1>
+			</div>
+			<div class="col-xs-8">
+				<ul class="list-inline text-right topbar-list">
+					<li><a class="btn btn-link topbar-link" href="#">BLOG</a></li>
+					<li><a class="btn btn-link topbar-link" href="#">JOBS</a></li>
+				</ul>
+			</div>	
+		</div>
+
 		<h1>peeqo</h1>
 	</div>
 </template>
