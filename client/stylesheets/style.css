@@ -1,6 +1,16 @@
 /* CSS declarations go here */
 
+/*MAIN COLOR:#f64638;
+/*SHADE DARKER:#dd3f32;
+/*SHADE LIGHTER:#f6584b;
+
+
 /*BOOTSTRAP OVERRIDES*/
+
+h1,h2 {
+	font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
 .btn, .btn-lg, .input-lg, .form-control  {
 	border-radius: 0;
 }
@@ -48,7 +58,34 @@
 
 /****** PANEL 1 ********/
 
-.btn-custom {
+.btn-call-to-action {
 	background: #F64638;
 	color: #ffffff;
+	border:1px solid #dd3f32;
+	font-size: 24px;
+}
+
+.btn-call-to-action:hover {
+	background: #38e8f6;
+	color: #ffffff;
+	border:1px solid #32d0dd;
+	font-size: 24px;
+}
+
+/******* DIVIDERS *******/
+.divider {
+	padding: 30px 0;
+	border-top:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+}
+
+.divider-h2 {
+	color: #ffffff;
+	margin:0;
+	text-align: center;
+}
+
+.divider-one {
+	background: #F64638;
+	border-color: #dd3f32;
 }

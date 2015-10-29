@@ -1,12 +1,13 @@
 <template name="main">
 	{{>topbar}}
-	<div class="container">
-		{{>yield}}
-	</div>
+	
+	{{>yield}}
+	
 </template>
 	
 <template name="home">
-	{{>panel1}}
+	{{>panelOne}}
+	{{>dividerOne}}
 	{{>panel2}}
 	{{>panel3}}
 	{{>panel4}}
@@ -29,27 +30,39 @@
 	</div>
 </template>
 
-<template name="panel1">
-	<div class="row">
-		<div class="col-sm-6">
-			<img src="/images/placeholder_long.png" class="img-responsive" alt="peeqo" width="400">
-		</div>
-		<div class="col-sm-6">
-			<h1 class="h1-intro">Hey I'm Peeqo,<br>The first robot to interact through GIFs, 'nuf said!</h1>
-
-			<a class="btn btn-default btn-lg btn-custom">OMG I want one</a>
+<template name="panelOne">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<img src="/images/placeholder_long.png" class="img-responsive" alt="peeqo" width="400">
+			</div>
+			<div class="col-sm-6">
+				<h1 class="h1-intro">Hey I'm Peeqo,<br><br>The first robot to interact through GIFs...'nuf said.</h1>
+				<br><br>
+				<a class="btn btn-default btn-lg btn-call-to-action">OMG I Want One</a>
+			</div>
 		</div>
 	</div>
 </template>
 
-
+<template name="dividerOne">
+	<div class="container-fluid divider divider-one">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="divider-h2">Put me on your desk</h2>
+			</div>
+		</div>
+	</div>
+</template>
 
 <template name="panel2">
 	<div class="row">
-		<h2 class="text-center">I'm your perfect workplace companion</h2>
-		<div class="col-sm-4">
+		<h3 class="text-center">I'm <i>your</i> perfect/rad/crazy/delightful/one-of-a-kind/tiny/sassy/groovy/entertaining/funny/cheerful/ personal assistant</h3>
+		<p class="text-center">(minus the sick leaves, expenses or awkward chemistry)</p>
+		<div class="col-sm-4 text-center">
 			<h4>Reminders</h4>
-			<p></p>
+			<img class="featureset-img" src="/images/placeholder_wide.png">
+			<p>Forget about forgetting. I got your back and I'll sync up to your calendar of choice.</p>
 		</div>
 		<div class="col-sm-4">
 			<h4>Notifications</h4>
