@@ -15,7 +15,7 @@
 <template name="panel1">
 <div class="row">
 	<div class="col-sm-6">
-		<img src="/images/placeholder_long.png" alt="peeqo" width="400">
+		<img src="/images/placeholder_long.png" class="img-responsive" alt="peeqo" width="400">
 	</div>
 	<div class="col-sm-6">
 		<h1>Hi, I'm Peeqo<br>The first robot to interact through GIFs, 'nuf said</h1>
@@ -27,6 +27,12 @@
 		<p>A personal assistant without the hassles or the expense or the complicated love triangles. Well you might fall in love with me</p>
 	</div>
 </div>
+</template>
+
+<template name="navbar">
+	<div class="container">
+		<h1>peeqo</h1>
+	</div>
 </template>
 
 <template name="panel2">
@@ -88,8 +94,8 @@
 
 <template name="signup">
 	<form>
-		<input type="email" name="email" placeholder="email" required='required'>
-		<input type="submit" value="Add">
+		<input type="email" class="form-control input-lg" name="email" placeholder="email" required='required'>
+		<input type="submit" class="btn btn-large btn-primary" value="Add">
 	</form>
 </template>
 
