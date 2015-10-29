@@ -1,6 +1,6 @@
 <template name="main">
 	{{>topbar}}
-	<div class="container-fluid">
+	<div class="container">
 		{{>yield}}
 	</div>
 </template>
@@ -11,23 +11,6 @@
 	{{>panel3}}
 	{{>panel4}}
 	{{>panel5}}
-</template>
-
-<template name="panel1">
-<div class="row">
-	<div class="col-sm-6">
-		<img src="/images/placeholder_long.png" class="img-responsive" alt="peeqo" width="400">
-	</div>
-	<div class="col-sm-6">
-		<h1>Hi, I'm Peeqo<br>The first robot to interact through GIFs, 'nuf said</h1>
-		{{>signup}}
-
-		<br><br>
-		<p>Actually there's more</p>
-		<p>Not your average bot</p>
-		<p>A personal assistant without the hassles or the expense or the complicated love triangles. Well you might fall in love with me</p>
-	</div>
-</div>
 </template>
 
 <template name="topbar">
@@ -43,10 +26,23 @@
 				</ul>
 			</div>	
 		</div>
-
-		<h1>peeqo</h1>
 	</div>
 </template>
+
+<template name="panel1">
+	<div class="row">
+		<div class="col-sm-6">
+			<img src="/images/placeholder_long.png" class="img-responsive" alt="peeqo" width="400">
+		</div>
+		<div class="col-sm-6">
+			<h1 class="h1-intro">Hey I'm Peeqo,<br>The first robot to interact through GIFs, 'nuf said!</h1>
+
+			<a class="btn btn-default btn-lg btn-custom">OMG I want one</a>
+		</div>
+	</div>
+</template>
+
+
 
 <template name="panel2">
 	<div class="row">

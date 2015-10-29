@@ -37,10 +37,18 @@
 .topbar-link {
 	font-size: 18px;
 	font-weight: 300;
-	color: #ccc;
+	color: #aaa;
 }
 
 .topbar-link:hover {
 	color: #F64638;
 	text-decoration: none;
+}
+
+
+/****** PANEL 1 ********/
+
+.btn-custom {
+	background: #F64638;
+	color: #ffffff;
 }
