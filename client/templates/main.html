@@ -9,9 +9,13 @@
 	{{>panelOne}}
 	{{>dividerOne}}
 	{{>panelTwo}}
+	{{>dividerTwo}}
 	{{>panel3}}
+	{{>dividerThree}}
 	{{>panel4}}
+	{{>dividerFour}}
 	{{>panel5}}
+	{{>footer}}
 </template>
 
 <template name="topbar">
@@ -55,34 +59,80 @@
 	</div>
 </template>
 
+<template name="dividerTwo">
+	<div class="container-fluid divider divider-two">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="divider-h2">Beyond my tiny body</h2>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="dividerThree">
+	<div class="container-fluid divider divider-three">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="divider-h2">Beyond my tiny body</h2>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="dividerFour">
+	<div class="container-fluid divider divider-four">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="divider-h2">Glad you asked</h2>
+			</div>
+		</div>
+	</div>
+</template>
+
 <template name="wordCycle">
-	<h3 class="text-center">I'm <em>your</em> <span class="word">perfect</span> personal assistant</h3>
+	<h3 class="text-center">I'm <em>your</em> <span class="word">perfect</span> personal assistant*</h3>
 </template>
 
 <template name="panelTwo">
-	<div class="row">
-		{{>wordCycle}}
-		<p class="text-center subtext">*minus the sick leaves, expenses or awkward chemistry</p>
-		<div class="col-sm-4 text-center">
-			<h4>Reminders</h4>
-			<img class="featureset-img" src="/images/placeholder_wide.png">
-			<p>Forget about forgetting. I got your back and I'll sync up to your calendar of choice.</p>
-		</div>
-		<div class="col-sm-4">
-			<h4>Notifications</h4>
-			<p>Switch off those annoying notifications. Let me who can bother you and when and I'll deal with it. </p>
-		</div>
-		<div class="col-sm-4">
-			<h4>Tracking</h4>
-			<p>When you're slacking at work and need a boost I'll be there. If you burning the midnight oil and need a break I'll let you know. Let's work smarter together.</p>
-		</div>
-		<div class="col-sm-4">
-			<h4>Sharing</h4>
-			<p>I connect to other Peeqo's. So let me know what you want to send and to whom and their Peeqo will notify them when he receives your message.</p>
-		</div>
-		<div class="col-sm-4">
-			<h4>and More</h4>
-			<p>I learn as I grow and get new skills pushed to me often. If there's something that missing, you can add it in yourself. It's as simple as drag and drop.</p>
+	<div class="container">
+		<div class="row">
+			{{>wordCycle}}
+			<p class="text-center subtext">*minus the sick leaves, expenses or awkward chemistry</p>
+			<div class="col-sm-4 text-center">
+				<h4>Reminders</h4>
+				<img class="featureset-img" src="/images/placeholder_wide.png">
+				<p>Forget about forgetting. I got your back and I'll sync up to your calendar of choice.</p>
+			</div>
+			<div class="col-sm-4 text-center">
+				<h4>Notifier</h4>
+				<img class="featureset-img" src="/images/placeholder_wide.png">
+				<p>Switch off those annoying notifications. Let me know who can bother you and when and I'll take care off it.</p>
+			</div>
+			<div class="col-sm-4 text-center">
+				<h4>Motivator</h4>
+				<img class="featureset-img" src="/images/placeholder_wide.png">
+				<p>When you're slacking at work and need a boost I'll be there. If you burning the midnight oil and need a break I'll let you know. Let's work smarter together.</p>
+			</div>
+			<div class="col-sm-4 text-center">
+				<h4>Messenger</h4>
+				<img class="featureset-img" src="/images/placeholder_wide.png">
+				<p>Want to share something you're browsing on your computer. Say the words and I'll get on it.</p>
+			</div>
+			<div class="col-sm-4 text-center">
+				<h4>Selfie Snapper</h4>
+				<img class="featureset-img" src="/images/placeholder_wide.png">
+				<p>Say the words and I'll snap you and send it to whoever you want. No more weird stretched out arms.</p>
+			</div>
+			<div class="col-sm-4 text-center">
+				<h4>Friend</h4>
+				<img class="featureset-img" src="/images/placeholder_wide.png">
+				<p>Work gets hard. Work gets boring. I'll help you get through the day and have some fun while you're at it.</p>
+			</div>
+			<div class="col-sm-4 text-center">
+				<h4>More, more, more...</h4>
+				<img class="featureset-img" src="/images/placeholder_wide.png">
+				<p>My skills are constantly being updated by the robot overlords. If somethings missing, you can add it in yourself. As simple as drag and drop.</p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -90,12 +140,12 @@
 <template name="panel3">
 	<div class="row">
 		<div class="col-sm-12">
-			<h2>A personality that grows with you</h2>
+			<h2>Connected / interconnected</h2>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-			<p>examples of expressions</p>
+			<p>graph with peeqo connecting to devices</p>
 		</div>
 	</div>
 </template>
@@ -114,6 +164,24 @@
 		<div class="col-sm-12">
 			<h1>I want one</h1>
 			<p>contact hi@peeqo.com</p>
+		</div>
+	</div>
+</template>
+
+<template name="footer">
+	<div class="container-fluid footer">
+		<div class="row text-center">
+			<div class="col-xs-12">
+				<ul class="list-inline">
+					<li><a href="https://facebook.com/iampeeqo" target="blank"><img src="/images/fb.png" alt="Facebook" width="50"></a></li>
+					<li><a href="https://twitter.com/iampeeqo" target="blank"><img src="/images/twitter.png" alt="Twitter" width="50"></a></li>
+					<li><a href="" target="blank"><img src="/images/tumblr.png" alt="Tumblr" width="50"></a></li>
+				</ul>
+			</div>
+
+			<div class="col-xs-12">
+				<p class="small">Being built with love, GIFs and magic in NYC.</p>
+			</div>
 		</div>
 	</div>
 </template>

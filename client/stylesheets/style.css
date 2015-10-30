@@ -98,3 +98,37 @@ h1,h2 {
 	background: #F64638;
 	border-color: #dd3f32;
 }
+
+.divider-two {
+	background: #38e8f6;
+	border-color: #32d0dd;
+}
+
+.divider-three {
+	background: #39B54A;
+	border-color: #39A949;
+}
+
+.divider-four {
+	background: #008FB5;
+	border-color: #0085B5;
+}
+
+/****** PANEL 2 *******/
+
+.word {
+	color: #f64638;
+	border-bottom: 2px dotted #38e8f6;
+}
+
+.featureset-img {
+	width:300px;
+}
+
+/****** FOOTER ******/
+
+.footer {
+	background: #f64638;
+	color: #ffffff;
+	border-top:1px solid #dd3f32;
+}

@@ -52,6 +52,9 @@ To other Peeqos everywhere. Remotely control someone else's Peeqo or send messag
 
 circular graph with peeqo in the center
 
+You want expressive?
+
+If a picture is worth a 1000 words, what's a gif?
 
 Personal Assistant. Friend. 
 
@@ -100,6 +103,10 @@ Can I name you something else?
 Why you so small?
 
 	Good things come in small packages/ Size doesnt matter/You want a 3 foot robot towering over your head near your computer?
+
+Can you bring me coffee?
+	
+	No, but I can connect to your smart coffee machine and let it know to keep it ready
 
 button at end of page-
 
