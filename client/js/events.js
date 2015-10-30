@@ -10,6 +10,23 @@ Template.wordCycle.onRendered(function(){
   },700)
 });
 
+Template.body.events({
+  "click":function(event){
+    console.log("Hi")
+  },
+  "click .anchor": function(event){
+    event.preventDefault();
+    console.log("hi")
+    var target = this.hash;
+    console.log(target);
+    var targetElement = $(target);
+
+    $('html,body').stop().animate({
+      'scrollTop': targetElement.offset().top
+    }, 500, 'swing');
+  }
+})
+
 Template.signup.events({
   'submit form': function (event) {
     // increment the counter when button is clicked
