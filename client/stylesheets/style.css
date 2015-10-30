@@ -6,6 +6,11 @@
 
 
 /*BOOTSTRAP OVERRIDES*/
+@font-face{
+	font-family: 'chunkfive';
+	src: url('./fonts/chunkfive.otf');
+}
+
 
 h1,h2 {
 	font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -86,17 +91,20 @@ h1,h2 {
 	padding: 30px 0;
 	border-top:1px solid #ffffff;
 	border-bottom:1px solid #ffffff;
+	background: url('./images/bg-shadow.png') no-repeat top center;
 }
 
 .divider-h2 {
-	color: #ffffff;
+	font-family: "chunkfive", "Helvetica Neue", "Helvetica", sans-serif;
+	color: #333;
 	margin:0;
 	text-align: center;
 }
 
-.divider-one {
+/*.divider-one {
 	background: #F64638;
 	border-color: #dd3f32;
+	background: url('./images/bg-shadow.png') no-repeat top center;
 }
 
 .divider-two {
@@ -112,7 +120,7 @@ h1,h2 {
 .divider-four {
 	background: #008FB5;
 	border-color: #0085B5;
-}
+}*/
 
 /****** PANEL 2 *******/
 
@@ -128,6 +136,7 @@ h1,h2 {
 /****** FOOTER ******/
 
 .footer {
+	padding-top: 15px;
 	background: #f64638;
 	color: #ffffff;
 	border-top:1px solid #dd3f32;
