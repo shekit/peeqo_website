@@ -1,5 +1,5 @@
 Template.wordCycle.onRendered(function(){
-  var words = ['delightful','rad','crazy','one-of-a-kind','tiny','charming','groovy','entertaining','funny','cheerful','perfect'];
+  var words = ['delightful','rad','crazy','hip','one-of-a-kind','tiny','charming','groovy','entertaining','funny','cheerful','perfect','amazing','spunky'];
   var count = 0;
   setInterval(function(){
     $(".word").html(words[count]);

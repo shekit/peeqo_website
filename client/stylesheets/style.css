@@ -33,6 +33,10 @@ h1,h2 {
 
 /***** GENERAL ******/
 
+.orange {
+	color: #f64638;
+}
+
 .subtext {
 	font-style: italic;
 	font-size: 12px;
